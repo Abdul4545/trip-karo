@@ -6,7 +6,7 @@ const AdventureCard = (props) => {
   return (
     <div className='adventure_card_container'>
 
-      <img src={props.image}></img>
+      <img src={props.image} alt=''/>
       <div className='adventure_card_text'>
         <div className='adventure_name_price'>
             <div>{props.name}</div>

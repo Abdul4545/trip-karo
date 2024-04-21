@@ -3,6 +3,7 @@
     width: 220px;
     color: white;
     position: relative;
+    
 }
 
 .card_container >img{
@@ -16,6 +17,7 @@
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
+    
 }
 .card_container > .card_text > h4 {
     margin-top: -0.3rem;

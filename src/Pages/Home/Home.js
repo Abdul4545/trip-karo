@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Header from '../../Components/Header/Header';
+// import Header from '../../Components/Header/Header';
 import HeroSection from '../../Components/HeroSection/HeroSection'
 import CardGroup from '../../Components/CardGroup/CardGroup';
 

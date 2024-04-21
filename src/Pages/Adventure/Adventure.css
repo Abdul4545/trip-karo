@@ -1,5 +1,6 @@
 .adventure_container{
     padding:  5vh 8vw;
+    background-color: rgb(241, 241, 247);
 }
 .adventure_container>h1, .adventure_container>h3{
     font-weight: 500;

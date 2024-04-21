@@ -1,0 +1,63 @@
+.AdventureDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 241, 247);
+}
+
+
+.AdventureDetailsContainer, .content {
+    border: 1px solid grey;
+    width: 100vw;
+    border-radius: 3px;
+}
+
+.adventure-details-flex-1 > h1 {
+    color: #212529;
+    line-height: 2rem;
+    font-weight: 550;
+    margin-left: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.adventure-details-flex-1 > h3 {
+    color: #212529;
+    line-height: 2rem;
+    font-weight: 550;
+    margin-left: 5px;
+    text-align: center;
+}
+.adventure-details-flex-1 {
+    /* flex: 2; */
+    color: #212529;
+    line-height: 1.5rem;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.adventure-details-flex-1 > div > h4 {
+    color: #212529;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.adventure-details-flex-1 > img {
+    width: 50%;
+    margin: 0% 25% 0% 25%;
+
+
+}
+
+
+.adventure-details-flex-1 > div {
+padding: 1rem;
+}
+
+/* .adventure-details-flex-1 {
+    width: 100%;
+} */
+
+/* .adventure-details-flex-2 {
+    flex: 1;
+} */

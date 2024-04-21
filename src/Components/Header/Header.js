@@ -6,10 +6,10 @@ const Header = () => {
     <div className='header_navbar'>
       <h1>TripKaro</h1>
     
-        <ul>
+        {/* <ul>
             <li>Home</li>
             <li>Resavaration</li>
-        </ul>
+        </ul> */}
   
     </div>
   )

@@ -1,16 +1,32 @@
 import React, { useState } from 'react';
 import './Adventure.css'
-import AdventureCard from '../../Components/AdventureCard/AdventureCard';
+
 import AdventureCardGroup from '../../Components/AdventureCardGroup/AdventureCardGroup';
 
 const Adventure = () => {
 
   const [filterByDuration, setFilterByDuration] = useState('');
+  const [clearFilterByDuration, setClearFilterByDuration] = useState(false);
 
-  const handleFilterChange = (e) => {
-    setFilterByDuration(e.target.value)
+  const [filterByCategory, setFilterByCategory] = useState('');
+  const [clearFilterByCategory, setClearFilterByCategory] = useState(false);
+  
+
+  const handleFilterChange = (event) => {
+    setFilterByDuration(event.target.value)
   }
-  console.log(filterByDuration);
+
+  const handleClearFilter = (event) => {
+    setClearFilterByDuration(true)
+  }
+
+  const handleCategoryChange = (event) => {
+    setFilterByCategory(event.target.value)
+  }
+
+  const handleClearCategory = () => {
+    setClearFilterByCategory(true)
+  }
 
   return (
     <div className='adventure_container'>
@@ -22,30 +38,30 @@ const Adventure = () => {
     
         <div>
         <select onChange={handleFilterChange}>
-            <option disabled>Filter by duration</option>
+            <option disabled selected>Filter by duration</option>
             <option value="0-2hours">0-2 Hours</option>
             <option value="2-6hours">2-6 Hours</option>
             <option value="6-12hours">6-12 Hours</option>
             <option value="12+hours">12+ Hours</option>
           </select>
 
-          <span>Clear</span>
+          <span onClick={handleClearFilter} style={{cursor: "pointer"}}>Clear</span>
         </div>
 
         <div>
-          <select>
-            <option disabled>Add Category</option>
+          <select onChange={handleCategoryChange}>
+            <option disabled selected>select Category</option>
             <option value="cycling">Cycling</option>
-            <option value="hill-side-gateway">Hill Side Gatway</option>
-            <option value="serene-beaches">Serene Beaches</option>
-            <option value="party-spot">Party Spot</option>
+            <option value="hill-side">Hill Side</option>
+            <option value="beaches">Seren Beaches</option>
+            <option value="party">Party Spot</option>
           </select>
 
-          <span>Clear</span>
+          <span onClick={handleClearCategory} style={{cursor: "pointer"}}>Clear</span>
         </div>
       </div>
 
-      <AdventureCardGroup filterByDuration={filterByDuration}/>
+      <AdventureCardGroup filterByDuration={filterByDuration} clearFilterByDuration = {clearFilterByDuration} filterByCategory = {filterByCategory} clearFilterByCategory = {clearFilterByCategory} />
     </div>
   )
 }
